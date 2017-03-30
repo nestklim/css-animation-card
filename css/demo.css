@@ -1,0 +1,76 @@
+body {
+  background: #8a3;
+}
+
+.ba-cards {
+  margin: auto;
+  padding: 120px 30px 30px;
+  text-align: center;
+}
+
+.ba-card {
+  display: inline-block;
+  width: 300px;
+  height: 436px;
+  position: relative;
+  -webkit-perspective: 900px;
+          perspective: 900px;
+  margin: 0 30px 60px;
+  border-radius: 12px;
+}
+
+.ba-card .front, .ba-card .back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 436px;
+  border-radius: 12px;
+  transition: .4s ease-in;
+  transition-property: background, -webkit-transform;
+  transition-property: transform, background;
+  transition-property: transform, background, -webkit-transform;
+  box-shadow: 1px 1px 3px 1px #333;
+}
+
+.ba-card .front {
+  background-image: radial-gradient(closest-side, transparent 0%, transparent 75%, #B6CC66 76%, #B6CC66 85%, #EDFFDB 86%, #EDFFDB 94%, #FFFFFF 95%, #FFFFFF 103%, #D9E6A7 104%, #D9E6A7 112%, #798B3C 113%, #798B3C 121%, #FFFFFF 122%, #FFFFFF 130%, #E0EAD7 131%, #E0EAD7 140%), radial-gradient(closest-side, transparent 0%, transparent 75%, #B6CC66 76%, #B6CC66 85%, #EDFFDB 86%, #EDFFDB 94%, #FFFFFF 95%, #FFFFFF 103%, #D9E6A7 104%, #D9E6A7 112%, #798B3C 113%, #798B3C 121%, #FFFFFF 122%, #FFFFFF 130%, #E0EAD7 131%, #E0EAD7 140%);
+  background-size: 110px 110px;
+  background-color: #C8D3A7;
+  background-position: 0 0, 55px 55px;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+  overflow: hidden;
+  border: 25px solid #fff;
+}
+
+.ba-card .back {
+  background: #fff url("../img/queen_of_diamonds.png") no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.ba-card .back-2 {
+  background-image: url("../img/queen_of_clubs.png");
+}
+
+.ba-card .back-3 {
+  background-image: url(../img/king_of_diamonds.png);
+}
+
+.ba-card:hover .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.ba-card:hover .back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+/*# sourceMappingURL=demo.css.map */
